@@ -1,3 +1,4 @@
 - name: deamon reload
   systemd_service:
+    name: dispatcher
     daemon_reload: true
