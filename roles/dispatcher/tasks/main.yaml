@@ -1,0 +1,25 @@
+- name: app setup
+  import_role:
+    name: common
+    tasks_from: app-setup
+
+- name: goland and dependencies installation
+  import_role:
+    name: common
+    tasks_from: golang
+
+- name: configure dispatch service
+  import_role:
+    name: common
+    tasks_from: service-file-setup
+  notify: daemon reload
+
+- name: enable and start the service
+  import_role:
+    name: common
+    tasks: restart
+  
+
+  
+
+
