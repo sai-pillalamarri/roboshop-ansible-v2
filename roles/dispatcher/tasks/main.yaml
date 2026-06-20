@@ -17,7 +17,7 @@
 - name: enable and start the service
   import_role:
     name: common
-    tasks: restart
+    tasks_from: restart
   
 
   
